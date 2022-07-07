@@ -50,7 +50,7 @@ contract RewardSystem {
 
         // check for enough balance is present into sender account
         // we can use msg.sender.balance or address(this).balance
-        if (msg.sender.balance < _wei) {
+        if (msg.sender.balance > _wei) {
           return (false, "Insufficient fund to transfer");
         }
 
